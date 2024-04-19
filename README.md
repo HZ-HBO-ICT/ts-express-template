@@ -43,6 +43,7 @@ In the package.json you can see which commands (in scripts) are used to run or b
 - `npm run dev`: in the dev environment we use this command to actually compile the TS code
 - `npm run build`: before the dev environment becomes the production environment we use this command
 - `npm run start`: in production we use this command the start a server in production
+- `npm run start_ts`: in development we use this command the start a server in with typescript files
 
 One note on running the command `npm run start`. We use nodemon to monitor the node server and to restart the server automatically. If we use `node start.js` we have to restart the server ourselves. You could install the nodemon package globally, but in this repo we installed it locally. On Windows it might be a problem to execute the `npm run dev win` command because of some security reasons. You probably have to execute the following command `Set-ExecutionPolicy RemoteSigned`. If you want to learn more about these policies please read the [Microsoft documentation](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-7.2).
 
@@ -60,13 +61,7 @@ You can change the ports of your server via `variables.env`
 
 ## Run TS directly via Nodemon
 
-We choose to compile TS to JS and run the compiled JS to test it. However it is possible to run
-
-[Nodemon and TS](https://blog.logrocket.com/configuring-nodemon-with-typescript/)
-
-Visit this [article on freecodecamp](https://www.freecodecamp.org/news/npm-vs-npx-whats-the-difference/) to understand the difference between `npm run` and `npx run`
+We choose to compile TS to JS and run the compiled JS to test it. However it is possible to run typescript in express [Nodemon and TS](https://blog.logrocket.com/configuring-nodemon-with-typescript/)
 
 For setting up the TS we used this [source](https://betterstack.com/community/guides/scaling-nodejs/nodejs-typescript/#step-2-installing-and-configuring-typescript)
 
-TSX
-NPX
